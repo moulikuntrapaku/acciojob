@@ -54,6 +54,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding-inline:100px;
+    background-image: url('./assets/arrow.png');
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 #s1-left{
     width: 600px;
@@ -93,15 +96,26 @@
     margin-top: 30px;
 
 }
+.holder-boxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+}
+#holder-boxes > div > h5,p{
+    font-size: 12px;
+    font-weight: 330;
+}
 #s-body{
     display:flex;
     flex-direction:row;
-    justify-content: space-between;
-    width: 711px;
+    justify-content: center;
+    align-items: center;
+    width: 630px;
     height: 77px;
-    padding-inline:20px;
-    padding-top: 10px;
-    padding: 15px, 20px, 15px, 20px;
+    padding: 20px;
     box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.08);
     gap: 10px;
     border: 1px solid rgba(226, 226, 226, 1);
@@ -111,15 +125,7 @@
 #s-body>div>p{
     color:rgba(79, 79, 79, 1);
 }
-#s-body>div{
-    display:flex;
-    flex-direction:column;
-    justify-content: space-between;
-}
-#s-body>img{
-    width:25px;
-    height: 25px;
-}
+
 #arrow{
     width: 113px;
     height: 68.06px;
@@ -209,6 +215,7 @@
     background: rgba(236, 248, 255, 1);
 }
 #course-header > p{
+    padding-top: 20px;
     font-size: 20px;
     font-style: italic;
     font-weight: 400;
@@ -233,7 +240,8 @@
 }
 #courses .sapling-card{
     width: 498px;
-    height: 563px;
+    height: fit-content;
+    padding-bottom: 30px;
     border-radius: 9px;
     border: 2px solid #2F80ED;
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
@@ -271,13 +279,12 @@
 }
 .course-overview p{
     width: auto;
-    height: 26px;
+    height: auto;
     padding: 6px 15px 6px 15px;
     border-radius: 7px;
     background: #E0F3FF;
     font-size: 14px;
     font-weight: 400;
-    line-height: 26px;
     letter-spacing: 0em;
     color: #1D78B0;
     text-align: center;
@@ -311,9 +318,12 @@
 }
 .features-container{
     margin: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 #sapling-card2{
-    margin-top: 24px;
+    border: 1px solid #E2E2E2
 }
 #sap-card2 p{
     background: #FFEED8;
@@ -358,33 +368,23 @@
     justify-content:space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 50px;
     width:1300px;
-    height:306px;
-    top: 323px;
-    left: 108px;
+    height:auto;
     gap: 48px;
-}
-#partners>img{
-    width:168.69px;
-    height: 70px;
-    padding: 10px;
-    gap: 10px;
+    padding: 100px;
 }
 #hiring-partners>button{
     width:276px;
     height: 55px;
-    top: 670px;
-    left: 582px;
     padding: 14px, 6px, 14px, 16px;
     border-radius: 8px;
+    border: none;
     gap: 2px;
     background-color: rgba(47, 128, 237, 1);
     color: white;
     font-size: 18px;
     font-size: italic;
     margin-bottom: 50px;
-    margin-top:20px;
     font-style: italic;
     font-family: 'ABeeZee', sans-serif;
 }
@@ -396,9 +396,10 @@
     align-items:center ;
     width:1,226px;
     height:738px;
-    top: 96px;
+    margin-top: 70px;
     left: 107px;
     gap: 54px;
+    margin-bottom: 150px;
 
 }
 #stories-head>h1{
@@ -407,11 +408,8 @@
     font-family: 'ABeeZee', sans-serif;
 }
 #students{
-    display:flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items:center ;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
     padding:auto;
     gap: 15px; 
     width: 1226px;
@@ -423,7 +421,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 398px;
-    height: 270px;
+    height: fit-content;
     padding: 24px;
     border-radius: 10px;
     border: 2px; 
@@ -438,18 +436,16 @@
 }
 #student2{
     width: 398px;
-    height:357px;
-    left: 413px;
+    height:fit-content;
     padding: 24px;
     border-radius: 10px;
     border: 2px;
     border: 2px solid rgba(215, 215, 215, 1);
     box-shadow: 5px 9px 40px 0px rgba(0, 0, 0, 0.08);
 }
-#student3,#student4{
+#student3{
     width: 398px;
-    height:309px;
-    top: 281px;
+    height:fit-content;
     padding: 24px;
     border-radius: 10px;
     border: 2px;
@@ -457,11 +453,19 @@
     box-shadow: 5px 9px 40px 0px rgba(0, 0, 0, 0.08);
 
 }
+#student4{
+    width: 398px;
+    height:fit-content;
+    padding: 24px;
+    border-radius: 10px;
+    border: 2px;
+    border: 2px solid rgba(215, 215, 215, 1);
+    box-shadow: 5px 9px 40px 0px rgba(0, 0, 0, 0.08);
+    margin-top: -95px;
+}
 #student5{
     width: 398px;
-    height:213px;
-    top: 377px;
-    left: 413px;
+    height:fit-content;
     padding: 24px;
     border-radius: 10px;
     border: 2px;
@@ -470,12 +474,11 @@
 }
 #student6{
     width:398px;
-    height:261px;
-    top: 329px;
-    left: 828px;
+    height:fit-content;
     padding: 24px;
     border-radius: 10px;
     border: 2px;
     border: 2px solid rgba(215, 215, 215, 1);
     box-shadow: 5px 9px 40px 0px rgba(0, 0, 0, 0.08);
+    margin-top: -45px;
 }
